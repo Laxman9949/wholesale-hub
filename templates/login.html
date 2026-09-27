@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block title %}Login | Wholesale Hub{% endblock %}
+{% block content %}
+<div class="auth-page"><div class="auth-card">
+<div class="brand"><span>WH</span><div><b>Wholesale Hub</b><small>Wholesale ordering platform</small></div></div>
+<h1>Welcome back</h1><p class="muted">Sign in to continue.</p>
+<form method="post" class="form-grid">
+<label>Email<input type="email" name="email" required autocomplete="email"></label>
+<label>Password<input type="password" name="password" required autocomplete="current-password"></label>
+<button class="btn primary full">Login</button>
+</form>
+<div class="auth-links"><a href="{{url_for('register')}}">Shopkeeper Registration</a><a href="{{url_for('distributor_register')}}">Distributor Registration</a><a href="{{url_for('admin_register')}}">Admin Registration</a></div>
+</div></div>
+{% endblock %}

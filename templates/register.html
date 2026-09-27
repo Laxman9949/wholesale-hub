@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% block title %}{{ title }} | Wholesale Hub{% endblock %}
+{% block content %}
+<div class="auth-page"><div class="auth-card wide">
+<div class="brand"><span>WH</span><div><b>Wholesale Hub</b><small>{{ title }}</small></div></div>
+<form method="post" class="form-grid two">
+<label>Full Name<input name="name" required></label>
+<label>Business Name<input name="business_name" required></label>
+<label>Phone<input name="phone" required></label>
+<label>Email<input type="email" name="email" required></label>
+<label>Password<input type="password" name="password" minlength="6" required></label>
+<label>GST Number<input name="gst_number" required></label>
+<label>Address<input name="address" required></label>
+<label>City<input name="city" required></label>
+<label>State<input name="state" required></label>
+<label>Pincode<input name="pincode" required></label>
+<button class="btn primary full span-2">Create Account</button>
+</form>
+<p class="center muted">Already registered? <a href="{{url_for('login')}}">Login</a></p>
+</div></div>
+{% endblock %}
